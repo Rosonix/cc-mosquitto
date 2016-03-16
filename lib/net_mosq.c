@@ -50,6 +50,10 @@ Contributors:
 #include <netinet/in.h>
 #endif
 
+#ifndef AI_ADDRCONFIG
+#define AI_ADDRCONFIG 0
+#endif
+
 #ifdef WITH_TLS
 #include <openssl/conf.h>
 #include <openssl/engine.h>

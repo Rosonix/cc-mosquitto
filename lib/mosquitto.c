@@ -47,7 +47,7 @@ typedef int ssize_t;
 #include "config.h"
 
 #if !defined(WIN32) && !defined(__SYMBIAN32__)
-#define HAVE_PSELECT
+/* #define HAVE_PSELECT */
 #endif
 
 void _mosquitto_destroy(struct mosquitto *mosq);

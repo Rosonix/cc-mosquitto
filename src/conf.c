@@ -64,6 +64,10 @@ static int _conf_parse_int(char **token, const char *name, int *value, char *sav
 static int _conf_parse_string(char **token, const char *name, char **value, char *saveptr);
 static int _config_read_file(struct mqtt3_config *config, bool reload, const char *file, struct config_recurse *config_tmp, int level, int *lineno);
 
+#ifndef AI_ADDRCONFIG
+#define AI_ADDRCONFIG 0
+#endif
+
 static int _conf_attempt_resolve(const char *host, const char *text, int log, const char *msg)
 {
 	struct addrinfo gai_hints;
