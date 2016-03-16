@@ -58,11 +58,11 @@ WITH_MEMORY_TRACKING:=yes
 WITH_SYS_TREE:=yes
 
 # Build with SRV lookup support.
-WITH_SRV:=yes
+WITH_SRV:=no
 
 # Build using libuuid for clientid generation (Linux only - please report if
 # supported on your platform).
-WITH_UUID:=yes
+WITH_UUID:=no
 
 # Build with websockets support on the broker.
 WITH_WEBSOCKETS:=no
@@ -71,7 +71,7 @@ WITH_WEBSOCKETS:=no
 WITH_EC:=yes
 
 # Build man page documentation by default.
-WITH_DOCS:=yes
+WITH_DOCS:=no
 
 # Build with client support for SOCK5 proxy.
 WITH_SOCKS:=yes
@@ -241,7 +241,7 @@ ifeq ($(WITH_DOCS),yes)
 endif
 
 INSTALL?=install
-prefix=/usr/local
+prefix=${PREFIX}
 mandir=${prefix}/share/man
 localedir=${prefix}/share/locale
 STRIP?=strip
